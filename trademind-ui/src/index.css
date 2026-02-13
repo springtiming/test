@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: var(--t-bg);
+  --color-surface: var(--t-surface);
+  --color-selected: var(--t-selected);
+  --color-btn-bg: var(--t-btn-bg);
+  --color-btn-hover: var(--t-btn-hover);
+  --color-input-bg: var(--t-input-bg);
+  --color-primary: #2563eb;
+  --color-success: #2DBD85;
+  --color-danger: #E02D42;
+  --color-warning: #F0B90B;
+  --color-text: var(--t-text);
+  --color-subtext: var(--t-subtext);
+  --color-heading: var(--t-heading);
+  --color-border: var(--t-border);
+  --color-overlay: var(--t-overlay);
+  --color-gold: #FFD700;
+  --color-silver: #C0C0C0;
+  --color-bronze: #CD7F32;
+  --radius-custom: 6px;
+}
+
+/* ---------- Dark (default) ---------- */
+:root {
+  --t-bg: #161b22;
+  --t-surface: #1f2630;
+  --t-selected: #2a3442;
+  --t-btn-bg: #253042;
+  --t-btn-hover: #2f3c4e;
+  --t-input-bg: #1e2733;
+  --t-text: #d4dbe5;
+  --t-subtext: #9eacbd;
+  --t-heading: #f4f7fc;
+  --t-border: #334052;
+  --t-overlay: rgba(0,0,0,0.6);
+  color-scheme: dark;
+}
+
+/* ---------- Light ---------- */
+[data-theme="light"] {
+  --t-bg: #f4f6fa;
+  --t-surface: #FFFFFF;
+  --t-selected: #e7ecf3;
+  --t-btn-bg: #e7ecf3;
+  --t-btn-hover: #d8e0eb;
+  --t-input-bg: #FFFFFF;
+  --t-text: #1f2937;
+  --t-subtext: #4b5563;
+  --t-heading: #111827;
+  --t-border: #d5ddea;
+  --t-overlay: rgba(15,23,42,0.28);
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  background-color: var(--t-bg);
+  color: var(--t-text);
+  font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  line-height: 1.5;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+/* 滚动条 */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--t-bg); }
+::-webkit-scrollbar-thumb { background: var(--t-border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--t-subtext); }
+
+input:focus, textarea:focus, button:focus {
+  outline: none;
+  box-shadow: none;
+}
